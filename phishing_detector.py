@@ -1,8 +1,10 @@
 from transformers import pipeline
 
-# Load pre-trained model from Hugging Face
-classifier = pipeline("text-classification", model="mrm8488/bert-tiny-finetuned-phishing")
+model = None
 
-def detect_phishing(text):
-    result = classifier(text)[0]
-    return result['label']
+def detect_phishing(text: str) -> str:
+    global model
+    if model is None:
+        model = pipeline("text-classification", model="mrm8488/bert-tiny-finetuned-phishing")
+    result = model(text)[0]
+    return result["label"]
