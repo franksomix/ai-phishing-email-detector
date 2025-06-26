@@ -1,23 +1,17 @@
 # AI-Powered Phishing Email Detector
 
-This project is built by **Francis Ezeanyino** as part of the 3MTT Cohort 3 Showcase. It uses an AI model from Hugging Face to classify email messages as "phishing" or "safe".
+This is a simple Streamlit app that detects whether an email is **phishing (spam)** or **safe (ham)** using an AI model from Hugging Face.
 
-## How It Works
+### 🔍 How It Works
+- Paste the email content in the box
+- Click "Analyze Email"
+- It returns whether it’s SPAM or HAM
 
-- You paste an email into the app.
-- The model analyzes the content.
-- It returns whether it's a phishing email or a legitimate one.
+### 👨‍💻 Built by:
+Francis Ezeanyino  
+3MTT Cohort 3 Fellow  
+GitHub: [@franksomix](https://github.com/franksomix)
 
-## Files Included
-
-- `app.py`: Streamlit interface
-- `phishing_detector.py`: AI model loading and prediction
-- `requirements.txt`: Required Python packages
-- `examples/`: Sample test emails
-
-## Running the App
-
-```bash
-pip install -r requirements.txt
-streamlit run app.py
-```
+### 🤖 Powered by:
+- Hugging Face model: `mrm8488/bert-tiny-finetuned-phishing`
+- Streamlit Cloud
