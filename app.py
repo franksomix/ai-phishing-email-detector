@@ -3,7 +3,7 @@ from PIL import Image
 logo = Image.open("logo.png")
 col1, col2 = st.columns([1, 5])
 with col1:
-    st.image(logo, width=120)
+    st.image(logo, width=180)
 from phishing_detector import detect_phishing
 
 st.set_page_config(page_title="AI Phishing Email Detector", layout="centered")
