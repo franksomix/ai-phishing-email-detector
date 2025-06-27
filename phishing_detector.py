@@ -2,12 +2,13 @@ from transformers import pipeline
 
 model = None
 
-def detect_phishing(text: str) -> dict:
+def detect_phishing(text: str) -> str:
     global model
     if model is None:
-        model = pipeline("text-classification", model="mrm8488/bert-tiny-finetuned-phishing")
+        model = pipeline(
+            "text-classification", 
+            model="mrm8488/bert-tiny-finetuned-phishing",
+            use_auth_token=True  # Important for Hugging Face
+        )
     result = model(text)[0]
-    return {
-        "label": result["label"],  # SPAM or HAM
-        "confidence": round(result["score"] * 100, 2)
-    }
+    return result["label"]
