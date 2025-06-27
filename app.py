@@ -4,7 +4,7 @@ from phishing_detector import detect_phishing
 st.set_page_config(page_title="AI Phishing Email Detector", layout="centered")
 
 # Optional logo
-st.image("logo.png", width=250)
+st.image("logo.png", width=180)
 
 st.title("AI Phishing Email Detector")
 st.markdown("Paste an email to detect whether it's a phishing attempt or a genuine message.")
