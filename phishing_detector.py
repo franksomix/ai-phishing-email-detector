@@ -5,10 +5,16 @@ model = None
 def detect_phishing(text: str) -> str:
     global model
     if model is None:
-        # Using a public model that doesn't require authentication
         model = pipeline(
             "text-classification",
-            model="mohsenfayyaz/phishing-email-detector-bert"
+            model="distilbert-base-uncased-finetuned-sst-2-english"
         )
+    
     result = model(text)[0]
-    return result["label"]
+    label = result["label"]
+
+    # Translate model's output to phishing/genuine
+    if label == "NEGATIVE":
+        return "Phishing"
+    else:
+        return "Genuine"
