@@ -1,17 +1,109 @@
-# AI-Powered Phishing Email Detector
+ AI Phishing Email Detector
 
-This is a simple Streamlit app that detects whether an email is **phishing (spam)** or **safe (ham)** using an AI model from Hugging Face.
+This is an AI-powered phishing detection tool built using Streamlit and Hugging Face Transformers. It analyzes the content of emails and classifies them as either **Phishing** or **Genuine**, helping users avoid scams.
 
-### 🔍 How It Works
-- Paste the email content in the box
-- Click "Analyze Email"
-- It returns whether it’s SPAM or HAM
+![App Logo](https://raw.githubusercontent.com/franksomix/ai-phishing-email-detector/main/logo.png)
 
-### 👨‍💻 Built by:
-Francis Ezeanyino  
-3MTT Cohort 3 Fellow  
-GitHub: [@franksomix](https://github.com/franksomix)
+---
 
-### 🤖 Powered by:
-- Hugging Face model: `mrm8488/bert-tiny-finetuned-phishing`
-- Streamlit Cloud
+## 💡 What It Does
+
+- ✅ Takes in email sender, subject, and content
+- 🧠 Uses a pre-trained AI model to classify the email
+- 💬 Returns whether it's a **Phishing** or **Genuine** message
+- 🌐 Runs fully online – no download or login required
+- 🎨 Designed with a glowing header, green “Analyse” button, and professional branding
+
+---
+
+## 🚀 Live Demo
+
+👉 Click here to use the app now:  
+🔗 **[https://franksomix-ai-phishing-email-detector.streamlit.app](https://franksomix-ai-phishing-email-detector.streamlit.app)**
+
+---
+
+## 🧠 How It Works
+
+- The app uses the **DistilBERT** model from Hugging Face
+- It performs **sentiment analysis** to determine intent
+- If the email content is **Negative** → it's labeled **Phishing**  
+- If the content is **Positive** → it's labeled **Genuine**
+
+_Note: This logic is simplified for demo purposes and will be upgraded later using phishing-specific datasets._
+
+---
+
+## 🧪 Sample Emails
+
+### ✅ Genuine Email
+
+Hello Francis, your interview is scheduled for Thursday. Let us know if you’re available.
+
+### ❌ Phishing Email
+
+URGENT: Your bank account has been suspended. Click http://fakebank.com to restore access.
+
+---
+
+## 📦 Technologies Used
+
+| Tool             | Purpose                         |
+|------------------|----------------------------------|
+| Streamlit        | UI and Web App Framework        |
+| Hugging Face Transformers | AI Model for Classification |
+| Python           | Backend Logic                   |
+| GitHub + Streamlit Cloud | Hosting & Version Control |
+
+---
+
+## 📂 File Structure
+
+```bash
+📁 ai-phishing-email-detector/
+├── app.py                 # Main Streamlit app UI
+├── phishing_detector.py   # Phishing detection logic using Hugging Face
+├── logo.png               # Custom branded logo
+└── README.md              # Project documentation
+
+
+---
+
+🙋 About the Creator
+
+👨‍💻 Name: Francis Ezeanyino
+🧭 3MTT Pathway: Cybersecurity
+🎓 Cohort: 3 (Three)
+🌍 GitHub Profile: franksomix
+
+
+---
+
+📣 3MTT Showcase Submission
+
+This project was submitted as part of the
+🧠 #3MTTLearningCommunity Showcase (June 2025)
+
+✅ Posted using hashtags: #My3MTT, #3MTTLearningCommunity
+✅ Tagged: @3MTTNigeria
+✅ GitHub Repo Link: https://github.com/franksomix/ai-phishing-email-detector
+
+
+---
+
+📌 Future Plans
+
+🔐 Train with actual phishing datasets for greater accuracy
+
+🧠 Integrate a confidence score with model output
+
+📬 Allow users to upload .eml files or email screenshots
+
+🌍 Build a dashboard for organizations to use it internally
+
+
+
+---
+
+Thanks for checking out this project!
+If you like it, feel free to ⭐ the repo and share!
