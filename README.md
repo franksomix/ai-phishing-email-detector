@@ -66,12 +66,9 @@ URGENT: Your bank account has been suspended. Click http://fakebank.com to resto
 ├── logo.png               # Custom branded logo
 └── README.md              # Project documentation
 
-
-
 ---
 
 ## 🙋 About the Creator
-
 
 👨‍💻 Name: Francis Ezeanyino
 🧭 3MTT, Cybersecurity Pathway, Cohort 3 fellow 
