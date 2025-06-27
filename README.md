@@ -66,32 +66,17 @@ URGENT: Your bank account has been suspended. Click http://fakebank.com to resto
 ├── logo.png               # Custom branded logo
 └── README.md              # Project documentation
 
-
 ---
 
-🙋 About the Creator
+## 🙋 About the Creator 
 
 👨‍💻 Name: Francis Ezeanyino
-🧭 3MTT Pathway: Cybersecurity
-🎓 Cohort: 3 (Three)
+🧭 3MTT, Cybersecurity Pathway, Cohort 3 fellow 
 🌍 GitHub Profile: franksomix
 
 
 ---
-
-📣 3MTT Showcase Submission
-
-This project was submitted as part of the
-🧠 #3MTTLearningCommunity Showcase (June 2025)
-
-✅ Posted using hashtags: #My3MTT, #3MTTLearningCommunity
-✅ Tagged: @3MTTNigeria
-✅ GitHub Repo Link: https://github.com/franksomix/ai-phishing-email-detector
-
-
----
-
-📌 Future Plans
+## 📌 Future Plans
 
 🔐 Train with actual phishing datasets for greater accuracy
 
