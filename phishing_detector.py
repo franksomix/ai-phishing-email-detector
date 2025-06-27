@@ -10,10 +10,13 @@ def detect_phishing(text: str) -> str:
             model="distilbert-base-uncased-finetuned-sst-2-english"
         )
     
-    result = model(text)[0]
+    results = model(text)
+    
+    # Get the first prediction result
+    result = results[0]
     label = result["label"]
 
-    # Translate model's output to phishing/genuine
+    # Map sentiment to phishing/genuine for demo
     if label == "NEGATIVE":
         return "Phishing"
     else:
