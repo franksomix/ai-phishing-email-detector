@@ -9,15 +9,15 @@ def detect_phishing(text: str) -> str:
             "text-classification",
             model="distilbert-base-uncased-finetuned-sst-2-english"
         )
-    
-    results = model(text)
-    
-    # Get the first prediction result
-    result = results[0]
-    label = result["label"]
 
-    # Map sentiment to phishing/genuine for demo
-    if label == "NEGATIVE":
-        return "Phishing"
-    else:
-        return "Genuine"
+    try:
+        results = model(text)
+
+        if isinstance(results, list) and len(results) > 0 and "label" in results[0]:
+            label = results[0]["label"]
+            return "Phishing" if label == "NEGATIVE" else "Genuine"
+        else:
+            return "Error: Model returned unexpected result."
+
+    except Exception as e:
+        return f"Error: {str(e)}"
