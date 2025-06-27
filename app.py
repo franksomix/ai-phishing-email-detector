@@ -20,7 +20,7 @@ if st.button("Analyze Email"):
     if body:
         with st.spinner("Analyzing with AI..."):
             result = detect_phishing(body)
-            label = result["label"]
+            label = result[text]
             confidence = result["confidence"]
 
             if label.upper() == "SPAM":
